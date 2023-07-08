@@ -1,5 +1,10 @@
 import type { GatsbyConfig } from "gatsby";
 
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+};
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Frank's Portfolio Website`,
@@ -12,10 +17,10 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "CFPAT-xPi_Kzs6J-7nu4bAKiNtSqkYEeLKtn9f6n73BRCX6CY",
-      "spaceId": ""
+      "accessToken": contentfulConfig.accessToken,
+      "spaceId": contentfulConfig.spaceId,
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", {
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
