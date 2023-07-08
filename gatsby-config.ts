@@ -12,10 +12,10 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "CFPAT-xPi_Kzs6J-7nu4bAKiNtSqkYEeLKtn9f6n73BRCX6CY",
-      "spaceId": ""
+      "accessToken": "HoguYg-peZw9eJU_NLvCjzC5yMh-csjL2lPVlsT1ZOY",
+      "spaceId": "3gwmj6wanxt2"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", {
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
