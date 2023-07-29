@@ -1,8 +1,8 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby';
 
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -11,8 +11,8 @@ const contentfulConfig = {
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Frank's Portfolio Website`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: 'Frank\'s Portfolio Website',
+    siteUrl: 'https://www.yourdomain.tld',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -21,22 +21,22 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": contentfulConfig.accessToken,
-      "spaceId": contentfulConfig.spaceId,
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-sitemap", {
+      accessToken: contentfulConfig.accessToken,
+      spaceId: contentfulConfig.spaceId,
+    },
+  }, 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp', 'gatsby-plugin-postcss', 'gatsby-plugin-sitemap', {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
-    }
+      icon: 'src/images/icon.png',
+    },
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "images",
-      "path": "./src/images/"
+      name: 'images',
+      path: './src/images/',
     },
-    __key: "images"
-  }]
+    __key: 'images',
+  }],
 };
 
 export default config;
